@@ -122,7 +122,7 @@ let score = 0;
 
 let quizOver = false;
 
-let timeLeft = 15;
+let timeLeft = 20;
 
 let timerId = null;
 
@@ -193,7 +193,7 @@ const checkAnswer = () => {
         //alert("Wrong Answer!")
         showAlert(`Wrong Answer!  "${quiz[currentQuestionIndex].answer}"  is the Correct Answer`);
     }
-    timeLeft = 15;
+    timeLeft = 20;
     currentQuestionIndex++;
     if(currentQuestionIndex < quiz.length){
         
@@ -253,7 +253,7 @@ const startTimer = () => {
         if(timeLeft === 0){
             const confirmUser = confirm("Times Up! Do you want to continue?");
             if(confirmUser){
-                timeLeft = 15;
+                timeLeft = 20;
                 startQuiz();
             }
             else{
@@ -276,7 +276,7 @@ const stopTimer = () => {
 
 
 const startQuiz = () => {
-    timeLeft = 15;
+    timeLeft = 20;
     timer.style.display = "flex";
     showQuestions();
 }
